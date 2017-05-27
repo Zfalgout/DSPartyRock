@@ -82,7 +82,7 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="81"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="5pA-Os-Fbr" id="ZTj-Ut-XJw">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="81"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="80.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="partybanner" translatesAutoresizingMaskIntoConstraints="NO" id="LEs-E4-Rke">
@@ -132,7 +132,7 @@
                     </view>
                     <connections>
                         <outlet property="tableView" destination="7gz-i4-rym" id="DZE-hN-skJ"/>
-                        <segue destination="9W6-Se-bqa" kind="showDetail" id="9lN-P9-P47"/>
+                        <segue destination="9W6-Se-bqa" kind="showDetail" identifier="VideoVC" id="GSE-8s-OPN"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -152,20 +152,34 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OjK-I6-caX">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="288"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="667" id="A8N-fZ-m4g"/>
+                                    <constraint firstAttribute="width" constant="375" id="1dI-YC-ahj"/>
+                                    <constraint firstAttribute="height" constant="288" id="WhO-ax-YDy"/>
                                 </constraints>
                             </webView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0CN-jD-n9J">
+                                <rect key="frame" x="62" y="309" width="250" height="49"/>
+                                <fontDescription key="fontDescription" name="StillTime-Regular" family="Still Time" pointSize="35"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="Z0e-Z2-ga9" firstAttribute="top" secondItem="OjK-I6-caX" secondAttribute="bottom" id="B3p-EL-zp9"/>
-                            <constraint firstItem="OjK-I6-caX" firstAttribute="top" secondItem="Lt2-Qt-kNe" secondAttribute="top" id="JxA-CK-Mgs"/>
-                            <constraint firstItem="OjK-I6-caX" firstAttribute="leading" secondItem="Lt2-Qt-kNe" secondAttribute="leading" id="Rcz-hf-te3"/>
-                            <constraint firstAttribute="trailing" secondItem="OjK-I6-caX" secondAttribute="trailing" id="o3O-0n-Ivy"/>
+                            <constraint firstItem="Z0e-Z2-ga9" firstAttribute="top" secondItem="0CN-jD-n9J" secondAttribute="bottom" constant="309" id="9TX-8D-pMU"/>
+                            <constraint firstItem="OjK-I6-caX" firstAttribute="leading" secondItem="Lt2-Qt-kNe" secondAttribute="leading" id="G5Y-on-mZQ"/>
+                            <constraint firstAttribute="trailing" secondItem="OjK-I6-caX" secondAttribute="trailing" id="QbP-Kj-e6J"/>
+                            <constraint firstItem="0CN-jD-n9J" firstAttribute="top" secondItem="OjK-I6-caX" secondAttribute="bottom" constant="21" id="TW6-Uo-nOB"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="0CN-jD-n9J" secondAttribute="trailing" constant="47" id="ie4-gP-rX5"/>
+                            <constraint firstItem="OjK-I6-caX" firstAttribute="top" secondItem="Lt2-Qt-kNe" secondAttribute="top" id="tZl-Vb-boo"/>
+                            <constraint firstItem="0CN-jD-n9J" firstAttribute="leading" secondItem="Lt2-Qt-kNe" secondAttribute="leadingMargin" constant="46" id="vuH-jP-8g8"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="titleLbl" destination="0CN-jD-n9J" id="HHo-u8-wFi"/>
+                        <outlet property="webView" destination="OjK-I6-caX" id="k3u-V0-rAU"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xy6-By-pGk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
